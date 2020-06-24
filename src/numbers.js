@@ -23,23 +23,24 @@ const round = a => {
 };
 
 const roundUp = a => {
-  // your code here
+  return Math.ceil(a);
 };
 
 const roundDown = a => {
-  // your code here
+  return Math.floor(a);
 };
 
 const absolute = a => {
-  // your code here
+  return Math.abs(a);
 };
 
 const quotient = (a, b) => {
-  // your code here
+  const remainder = a % b;
+  return (a - remainder) / b;
 };
 
 const remainder = (a, b) => {
-  // your code here
+  return a % b;
 };
 
 module.exports = {
