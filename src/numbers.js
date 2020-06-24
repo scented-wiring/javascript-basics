@@ -7,19 +7,19 @@ const subtract = (a, b) => {
 };
 
 const multiply = (a, b) => {
-  // your code here
+  return a * b;
 };
 
 const divide = (a, b) => {
-  // your code here
+  return a / b;
 };
 
 const power = (a, b) => {
-  // your code here
+  return a ** b;
 };
 
 const round = a => {
-  // your code here
+  return Math.round(a);
 };
 
 const roundUp = a => {
