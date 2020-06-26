@@ -91,6 +91,7 @@ const sumNumbers = numbers => {
   return numbers.reduce(getSum, 0);
 };
 
+
 const sortByLastLetter = strings => {
   function last(x) {
     return x.sort(
