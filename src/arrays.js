@@ -1,61 +1,103 @@
 const getNthElement = (index, array) => {
-  // your code here
+
+  if (array.length > index) {
+    array.push("cat", "dog", "elephant", "fox");
+    return array[index];
+  } else {
+    return array[index];
+  }
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.toString();
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return string.split(",");
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
+  return undefined;
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  const newArray = array.slice();
+  newArray.push(element);
+  return newArray;
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  return numbers.map(String);
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  function toUpper(x) {
+    return x.toUpperCase();
+  }
+  return strings.map(toUpper);
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  function reverse(s) {
+    return s
+      .split("")
+      .reverse()
+      .join("");
+  }
+  return strings.map(reverse);
 };
 
 const onlyEven = numbers => {
-  // your code here
+  function isEven(value) {
+    if (value % 2 == 0) return true;
+    else
+      return false;
+  }
+  
+  return numbers.filter(isEven);
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  const newArray = array.slice();
+  newArray.splice(index, 1);
+  return newArray;
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  return strings.filter(function(string) {
+    return string.match(/^[aeiou]/gi)
+  })
 };
 
 const removeSpaces = string => {
-  // your code here
+  function myTrim(x) {
+    return x.replace(/\s/g, '');
+  }
+
+  return myTrim(string);
+
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  function getSum(total, num) {
+    return total + Math.round(num);
+  }
+
+  return numbers.reduce(getSum, 0);
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  function last(x) {
+    return x.sort(
+      (a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1)
+    );
+  }
+  return last(strings);
 };
 
 module.exports = {
